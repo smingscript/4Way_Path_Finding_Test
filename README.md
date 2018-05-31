@@ -7,5 +7,5 @@
 
 ## References
 - A* Algorithm
-https://github.com/SebLague/Pathfinding
-https://github.com/sharpaccent/Astar-for-Unity
+  - https://github.com/SebLague/Pathfinding
+  - https://github.com/sharpaccent/Astar-for-Unity
