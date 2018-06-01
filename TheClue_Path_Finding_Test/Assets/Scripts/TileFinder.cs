@@ -15,7 +15,7 @@ namespace Assets
             int tileGridX = grid.gridSizeX;
             int tileGridY = grid.gridSizeY;
 
-            boundaries = GetCoordinateValue(diceNumber);
+            boundaries = GetRangeValue(diceNumber);
 
             //TODO 직선 거리에 장애물이 있을 때 못 가는 타일이 더 늘어나는 문제 해결하기
             foreach (int boundary in boundaries)
@@ -41,7 +41,7 @@ namespace Assets
             return movableTiles;
         }
 
-        static List<int> GetCoordinateValue(int dice)
+        static List<int> GetRangeValue(int dice)
         {
             int value = dice;
             int coordValue;
@@ -64,7 +64,7 @@ namespace Assets
             return coordinateValues;
         }
 
-        public static Board RemoveDisableTiles(Point point, int dice, Board board)
+        public static List<Node> RemoveDisableTiles(Point point, int dice, Board board)
         {
             throw new NotImplementedException();
         }

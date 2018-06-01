@@ -32,9 +32,9 @@ namespace Assets
             return new Point(HorsePos.X + MovePos.X, HorsePos.Y + MovePos.Y);
         }
 
-        public bool Equal(Point checkerPoint)
-        {
-            return X == checkerPoint.X && Y == checkerPoint.Y ? true : false;
-        }
+        //public bool Equal(Point checkerPoint)
+        //{
+        //    return X == checkerPoint.X && Y == checkerPoint.Y ? true : false;
+        //}
     }
 }

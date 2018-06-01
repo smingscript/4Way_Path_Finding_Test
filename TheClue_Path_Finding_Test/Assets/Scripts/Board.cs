@@ -21,7 +21,7 @@ namespace Assets
             }
         }
 
-        public Point[,] Points { get; set; }
+        public Point[,] Points { get; private set; }
 
         public void ShowBoard()
         {
