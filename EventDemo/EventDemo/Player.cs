@@ -8,7 +8,11 @@ namespace EventDemo
 {
     class Player
     {
-        public Card[] GameCard { get; private set; }
+        public List<Card> GameCard { get; set; }
 
+
+        //#region Switch Turn Event
+
+        //#endregion
     }
 }

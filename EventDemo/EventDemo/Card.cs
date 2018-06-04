@@ -15,7 +15,7 @@ namespace EventDemo
     {
         #region EventHandler
         /// <summary>
-        /// 게임을 시작하기 위해서 카드를 세팅하기 위해 발생하는 이벤트
+        /// 게임을 시작할 때 카드를 세팅하기 위해 발생하는 이벤트
         /// </summary>
         public event EventHandler<CardDrawEventArgs> DrawCardToStart;
 
@@ -73,14 +73,20 @@ namespace EventDemo
 
         public Stack<Card> SetCardDeck()
         {
+            if (random == null)
+            {
+                random = new Random();
+            }
+
             Stack<Card> cardDeck = new Stack<Card>();
             string[] enumType = new string[] { "EventDemo.Suspect", "EventDemo.Place", "EventDemo.Weapon" };
 
             foreach (string item in enumType)
             {
                 Type type = GetEnumType(item);
+                Enum[] clueEnumItems = ArrayToList(Enum.GetValues(type));
 
-                foreach (var enumItem in ShuffleEnumElements(Enum.GetValues(type)))
+                foreach (var enumItem in clueEnumItems.OrderBy(i => random.Next()))
                 {
                     cardDeck.Push(new Card(enumItem));
                 }
@@ -92,22 +98,16 @@ namespace EventDemo
         }
 
         #region CardDeckGenerateHelper
-        private Enum[] ShuffleEnumElements(Array inputList)
+        private Enum[] ArrayToList(Array inputList)
         {
-            //var random = new Random();
-            if(random == null)
+            List<Enum> list = new List<Enum>();
+
+            foreach (var input in inputList)
             {
-                random = new Random();
+                list.Add((Enum)input);
             }
 
-            List<Enum> cardList = new List<Enum>();
-
-            foreach(var input in inputList)
-            {
-                cardList.Add((Enum)input);
-            }
-
-            return cardList.OrderBy(i => random.Next()).ToArray(); ; //return the new random list
+            return list.ToArray(); //return the new random list
         }
 
         Type GetEnumType(string enumName)
