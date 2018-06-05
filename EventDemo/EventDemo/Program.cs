@@ -22,8 +22,9 @@ namespace EventDemo
             List<Player> players = new List<Player> { new Player(), new Player(), new Player() };
 
             card.InitCluesToStart += DrawAnswerCard;
+            card.SetCards();
+            card.InitCluesToStart -= DrawAnswerCard;
             card.InitCluesToStart += new EventHandler<ClueInitEventArgs>((sender, e) => SetPlayerCard(sender, e, players));
-
             card.SetCards();
 
             Console.WriteLine("Answer Cards of this match is:");
@@ -35,7 +36,7 @@ namespace EventDemo
             }
 
             List<Card> gameCards = new List<Card>();
-            foreach (Card item in card.cardDeck)
+            foreach (Card item in card.CardDeck)
             {
                 gameCards.Add(item);
             }
@@ -65,6 +66,21 @@ namespace EventDemo
 
         }
 
+        static void Foo<T>(List<int> list, T[] array)
+        {
+            if (random == null)
+            {
+                random = new Random();
+            }
+
+            int index = random.Next(array.Length);
+            for (int i = 0; i < array.Length; i++)
+            {
+                if (i != index)
+                    list.Add(i);
+            }
+        }
+
         static void DrawAnswerCard(object sender, ClueInitEventArgs e)
         {
             if (random == null)
@@ -74,19 +90,11 @@ namespace EventDemo
 
             foreach (var enumItem in e.clueEnumItems.OrderBy(i => random.Next()))
             {
-                e.cardDeck.Push(new Card(enumItem));
+                e.CardDeck.Push(new Card(enumItem));
             }
 
-            e.AnswerCardDeck.Add(e.cardDeck.Pop());
+            e.AnswerCardDeck.Add(e.CardDeck.Pop());
 
-            //Console.WriteLine("Answer Cards of this match is:");
-
-            //foreach (var card in e.AnswerCardDeck)
-            //{
-            //    Console.WriteLine(card.CardType);
-                
-            //}
-            
         }
 
         static void SetPlayerCard(object sender, ClueInitEventArgs e, List<Player> players)
@@ -95,25 +103,11 @@ namespace EventDemo
 
             foreach (var enumItem in e.clueEnumItems.OrderBy(i => random.Next()))
             {
-                e.cardDeck.Push(new Card(enumItem));
+                e.CardDeck.Push(new Card(enumItem));
             }
 
-            e._answerCard.Add(e.cardDeck.Pop());
+            e.AnswerCardDeck.Add(e.CardDeck.Pop());
 
-            //List<Card> gameCards = new List<Card>();
-            //foreach(Card card in e.cardDeck)
-            //{
-            //    gameCards.Add(card);
-            //}
-
-            //players[0].GameCard = gameCards;
-
-            //Console.WriteLine();
-            //Console.WriteLine("Player's Card: ");
-            //foreach(Card card in players[0].GameCard)
-            //{
-            //    Console.WriteLine(card.CardType);
-            //}
         }
     }
 }
