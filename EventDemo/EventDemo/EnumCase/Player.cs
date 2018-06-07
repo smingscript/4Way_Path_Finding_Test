@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace EventDemo
 {
-    public enum Weapon
+    class Player
     {
-        Wrench,
-        CandleStick,
-        Knife,
-        Revolver,
-        LeadPipe,
-        Rope
+        public List<Card> GameCard { get; set; }
+
+
+        //#region Switch Turn Event
+
+        //#endregion
     }
 }

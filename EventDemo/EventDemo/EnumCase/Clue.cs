@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EventDemo
 {
-    public class Clue
+    public class Clue<T>
     {
         public void SetInitCardDeck()
         {
@@ -50,7 +50,7 @@ namespace EventDemo
                 CardDeckEvent(this, e);
         }
 
-        private CardDeckEventEventArgs OnCardDeckEvent(Stack<Card> cardDeck, List<Card> answerCardDeck)
+        private CardDeckEventEventArgs OnCardDeckEvent(List<Card> cardDeck, T[] answerCardDeck)
         {
             CardDeckEventEventArgs args = new CardDeckEventEventArgs(cardDeck, answerCardDeck);
             OnCardDeckEvent(args);
@@ -58,16 +58,16 @@ namespace EventDemo
             return args;
         }
 
-        public class CardDeckEventEventArgs : EventArgs
+        public class CardDeckEventEventArgs<T> : EventArgs
         {
-            public Stack<Card> CardDeck { get; set; }
-            public List<Card> AnswerCardDeck { get; set; }
+            public List<Card> CardDeck { get; set; }
+            public T[] AnswerCardDeck { get; set; }
 
             public CardDeckEventEventArgs()
             {
             }
 
-            public CardDeckEventEventArgs(Stack<Card> cardDeck, List<Card> answerCardDeck)
+            public CardDeckEventEventArgs(List<Card> cardDeck, T[] answerCardDeck)
             {
                 CardDeck = cardDeck;
                 AnswerCardDeck = answerCardDeck;

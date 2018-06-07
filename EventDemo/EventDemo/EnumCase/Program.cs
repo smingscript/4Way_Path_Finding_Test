@@ -13,6 +13,8 @@ namespace EventDemo
         {
             Clue card = new Clue();
 
+            card.CardDeckEvent += Card_CardDeckEvent;
+
             //var cardDeck = card.SetCardDeck();
 
             //3인 경기 가정
@@ -66,48 +68,50 @@ namespace EventDemo
 
         }
 
-        static void Foo<T>(List<int> list, T[] array)
+        private static void Card_CardDeckEvent(object sender, Clue.CardDeckEventEventArgs e)
         {
-            if (random == null)
-            {
-                random = new Random();
-            }
+            Random random = new Random();
+            ConvertInt2Enum(e);
 
             int index = random.Next(array.Length);
             for (int i = 0; i < array.Length; i++)
             {
                 if (i != index)
-                    list.Add(i);
+                    e.CardDeck.Add(i);
             }
         }
 
-        static void DrawAnswerCard(object sender, ClueInitEventArgs e)
+        private static void ConvertInt2Enum(Clue.CardDeckEventEventArgs e)
         {
-            if (random == null)
+            if (e.CardType == CardType.Suspect)
             {
-                random = new Random();
+                Suspect[] array = e.AnswerCardDeck.Select(x => (Suspect)x).ToArray();
             }
-
-            foreach (var enumItem in e.clueEnumItems.OrderBy(i => random.Next()))
+            if (e.CardType == CardType.Place)
             {
-                e.CardDeck.Push(new Card(enumItem));
+                Place[] array = e.AnswerCardDeck.Select(x => (Place)x).ToArray();
             }
-
-            e.AnswerCardDeck.Add(e.CardDeck.Pop());
-
+            if (e.CardType == CardType.Weapon)
+            {
+                Weapon[] array = e.AnswerCardDeck.Select(x => (Weapon)x).ToArray();
+            }
         }
+    }
 
-        static void SetPlayerCard(object sender, ClueInitEventArgs e, List<Player> players)
-        {
-            Random random = new Random();
+    static void Foo<T>(List<int> list, T[] array)
+    {
+        //if (random == null)
+        //{
+        //    random = new Random();
+        //}
 
-            foreach (var enumItem in e.clueEnumItems.OrderBy(i => random.Next()))
-            {
-                e.CardDeck.Push(new Card(enumItem));
-            }
+        
+    }
 
-            e.AnswerCardDeck.Add(e.CardDeck.Pop());
-
-        }
+    public enum CardType
+    {
+        Suspect,
+        Place,
+        Weapon
     }
 }
