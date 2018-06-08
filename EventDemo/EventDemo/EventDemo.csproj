@@ -43,12 +43,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassCase\Card.cs" />
-    <Compile Include="ClassCase\CardType.cs" />
+    <Compile Include="ClassCase\ClueType.cs" />
     <Compile Include="ClassCase\Clue.cs" />
+    <Compile Include="ClassCase\Deck.cs" />
     <Compile Include="ClassCase\Disprove.cs" />
+    <Compile Include="ClassCase\Game.cs" />
     <Compile Include="ClassCase\Place.cs" />
     <Compile Include="ClassCase\Player.cs" />
     <Compile Include="ClassCase\Program.cs" />
+    <Compile Include="ClassCase\Room.cs" />
     <Compile Include="ClassCase\Suggestion.cs" />
     <Compile Include="ClassCase\Suspect.cs" />
     <Compile Include="ClassCase\Weapon.cs" />

@@ -1,12 +1,7 @@
 ﻿namespace EventDemo
 {
-    public enum Suspect
+    class Disprove
     {
-        Green,
-        Mustard,
-        Peacock,
-        Plum,
-        Scarlet,
-        White
+
     }
 }

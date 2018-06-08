@@ -6,13 +6,31 @@ using System.Threading.Tasks;
 
 namespace EventDemo
 {
-    class Player
+    public class Player
     {
-        public List<Card> GameCard { get; set; }
+        public Player(string name)
+        {
+            Name = name;
+            GameCard = new List<Card>();
+        }
 
+        public string Name { get; private set; }
+        public List<Card> GameCard { get; private set; }
 
-        //#region Switch Turn Event
+        public Card[] AddCard(Card[] card)
+        {
+            GameCard.AddRange(card);
+            return card;
+        }
 
-        //#endregion
+        public Card this[int cardIndex]
+        {
+            get { return GameCard[cardIndex]; }
+        }
+
+        internal void PrepareNewRound()
+        {
+            GameCard.Clear();
+        }
     }
 }

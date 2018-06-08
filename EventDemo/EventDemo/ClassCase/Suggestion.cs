@@ -6,18 +6,47 @@ using System.Threading.Tasks;
 
 namespace EventDemo
 {
-    class Disprove
+    class Suggestion
     {
-        //Card card = new Card();
+        public static readonly List<string> suggestions = new List<string>();
+        private static string suggestion;
 
-        //public Disprove()
-        //{
-        //    card.DrawCardToStart += SetClues;
-        //}
+        public static bool MakeSuggestion(Dictionary<string, Enum> roomObjs)
+        {
+            if (suggestions.Count >= 3)
+            {
+                //TODO 추리에 반박하는 이벤트를 실행한다
+                return false;
+            }
+            
+            Console.WriteLine("추리 아이템을 하나씩 입력하세요:");
+            suggestion = Console.ReadLine();
 
-        //void SetClues(object sender, CardDrawEventArgs e)
-        //{
+            #region For Console
+            if (!roomObjs.Keys.ToArray().Contains(suggestion))
+            {
+                Console.WriteLine("추리 아이템을 잘못 입력했습니다, 다시 입력하세요");
+                return true;
+            }
+            #endregion
+            
+            if ((CardType)roomObjs[suggestion] == CardType.Place)
+            {
+                return true;
+            }
 
-        //}
+            if (suggestions.Contains(suggestion))
+            {
+                suggestions.Remove(suggestion);
+                return true;
+            }
+            else
+            {
+                suggestions.Add(suggestion);
+                return true;
+            }
+
+
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EventDemo
 {
-    class Weapon : CardType
+    public class Weapon : ClueType
     {
         public static string Wrench { get; } = "Wrench";
         public static string CandleStick { get; } = "CandleStick";

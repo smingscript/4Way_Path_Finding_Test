@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace EventDemo
 {
-    class Place : CardType
+    public class Place : ClueType
     {
         public static string Bathroom { get; } = "Bathroom";
-        public string Library { get; } = "Library";
-        public string GameRoom { get; } = "GameRoom"; 
-        public string Garage { get; } = "Garage";
-        public string Bedroom { get; } = "Bedroom";
-        public string Hall { get; } = "Hall";
-        public string Kitchen { get; } = "Kitchen";
-        public string Courtyard { get; } = "Courtyard";
-        public string DiningRoom { get; } = "DiningRoom";
+        public static string Library { get; } = "Library";
+        public static string GameRoom { get; } = "GameRoom"; 
+        public static string Garage { get; } = "Garage";
+        public static string Bedroom { get; } = "Bedroom";
+        public static string Hall { get; } = "Hall";
+        public static string Kitchen { get; } = "Kitchen";
+        public static string Courtyard { get; } = "Courtyard";
+        public static string DiningRoom { get; } = "DiningRoom";
     }
 }

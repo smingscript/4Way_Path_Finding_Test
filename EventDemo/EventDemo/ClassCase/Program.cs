@@ -10,26 +10,19 @@ namespace EventDemo
     {
         static void Main(string[] args)
         {
-            //Place place = new Place();
-            var a = CardType.GetAllItem(new Suspect());
-            foreach (var item in a)
+            Room room = new Room(Place.Courtyard);
+
+            while (Suggestion.MakeSuggestion(room.roomObjects))
             {
-                Console.WriteLine(item);
+                Console.WriteLine("선택한 카드:");
+                foreach (var item in Suggestion.suggestions)
+                {
+                    Console.WriteLine(item);
+                }
+                
             }
+
         }
-
-        private static void Card_CardDeckEvent(object sender, Clue.CardDeckEventEventArgs e)
-        {
-            Random random = new Random();
-            ConvertInt2Enum(e);
-
-            int index = random.Next(array.Length);
-            for (int i = 0; i < array.Length; i++)
-            {
-                if (i != index)
-                    e.CardDeck.Add(i);
-            }
-        }
-
+        
     }
 }

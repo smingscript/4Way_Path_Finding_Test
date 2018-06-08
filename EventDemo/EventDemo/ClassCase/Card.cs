@@ -4,29 +4,30 @@ using System.Linq;
 
 namespace EventDemo
 {
+    public enum CardType
+    {
+        Suspect,
+        Place,
+        Weapon
+    }
 
     public class Card
     {
-        
-        public Card(Enum type)
+        public Card(string name, Enum type)
         {
+            CardName = name;
             CardType = type;
         }
 
-        private static Random random;
-
+        public string CardName { get; private set; }
         public Enum CardType { get; private set; }
 
-        private List<Card> _answerCard = new List<Card>();
-
-        public List<Card> AnswerCard
+        public override string ToString()
         {
-            get
-            {
-                return _answerCard;
-            }
+            return $"{CardName}: {CardType}";
         }
-
     }
 
+    
+    
 }

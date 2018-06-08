@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace EventDemo
 {
-    class CardType
+    public class ClueType
     {
-        public static List<string> GetAllItem(CardType cardType)
+        public static List<string> GetAllItem(ClueType clueType)
         {
-            return cardType.GetType()
+            return clueType.GetType()
                      .GetProperties()
-                     .Select(field => (string) field.GetValue(cardType))
+                     .Select(field => (string) field.GetValue(clueType))
                      .ToList();
         }
     }
