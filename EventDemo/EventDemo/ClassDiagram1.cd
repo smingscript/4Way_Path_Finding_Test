@@ -1,2 +1,114 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram /> 
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EventDemo.Card" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAgAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>ClassCase\Card.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventDemo.Clue" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Class Name="EventDemo.Clue.SetGameItemsEventArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ClassCase\Clue.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+      <Class Name="EventDemo.Clue.SetRoomObjectsEventArgs" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ClassCase\Clue.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AABEACAAAAAAAAgAAEAACAAAAAAAACAAQAACAACAgAA=</HashCode>
+      <FileName>ClassCase\Clue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventDemo.ClueType" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassCase\ClueType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventDemo.Deck" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAhgAAAAAgAABAAAAAAAAAUAAAAAAAAAA=</HashCode>
+      <FileName>ClassCase\Deck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventDemo.Disprove" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassCase\Disprove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventDemo.Game" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAABAAAAAAABAgABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassCase\Game.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventDemo.Place" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAEAAAAogAIAAAACAAAAAAAAAAAAAAAAAEAAAAAAgA=</HashCode>
+      <FileName>ClassCase\Place.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventDemo.Player">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAABAAACAAAAAQAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>ClassCase\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventDemo.Program">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ClassCase\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventDemo.Room">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassCase\Room.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventDemo.Suggestion">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>ClassCase\Suggestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventDemo.Suspect">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAQAAABAAAAAAIAAAAABABAAA=</HashCode>
+      <FileName>ClassCase\Suspect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventDemo.Weapon" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAgAAAAEAAAAABAAAAAAAAAAAAABAAACAA=</HashCode>
+      <FileName>ClassCase\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="EventDemo.CardType" Collapsed="true">
+    <Position X="7.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAgAAgAAEAAAAAAAAA=</HashCode>
+      <FileName>ClassCase\Card.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Malgun Gothic" Size="9" />
+</ClassDiagram>
