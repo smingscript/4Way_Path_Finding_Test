@@ -19,7 +19,6 @@ namespace EventDemo
                 {
                     Console.WriteLine(item);
                 }
-                
             }
 
         }

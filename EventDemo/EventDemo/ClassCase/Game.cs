@@ -20,14 +20,13 @@ namespace EventDemo
 
         public void StartGame()
         {
-            Clue clue = new Clue();
-            clue.SetGameItems += Clue_SetAnswerCards;
+            //정답 카드와 플레이어 카드 덱 이벤트를 등록한 후, PrepareNewRound()에서 이벤트를 실행한다.
+            Clue.Instance.SetGameItems += Clue_SetAnswerCards;
+            Deck.Instance.PrepareNewRound();
         }
 
         public void DistributeCards()
         {
-            Deck.Instance.PrepareNewRound();
-
             foreach (var player in _players)
                 player.PrepareNewRound();
 

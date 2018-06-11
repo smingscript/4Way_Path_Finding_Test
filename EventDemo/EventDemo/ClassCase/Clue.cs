@@ -8,6 +8,19 @@ namespace EventDemo
 {
     public class Clue
     {
+        #region Clue Singleton
+        private static Clue _instance;
+
+        public static Clue Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Clue();
+                return _instance;
+            }
+        }
+
         public Clue()
         {
             clueLists = new Dictionary<Enum, List<string>>
@@ -17,6 +30,9 @@ namespace EventDemo
                 { CardType.Weapon, ClueType.GetAllItem( new Weapon()) }
             };
         }
+
+        #endregion
+
         public Dictionary<Enum, List<string>> clueLists;
 
         public void SetItems()

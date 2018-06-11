@@ -24,13 +24,6 @@ namespace EventDemo
         private Deck()
         {
             _cards = new List<Card>();
-
-            //clue에서 data를 받아서 _card에 18장의 카드를 생성한다.
-            Clue clue = new Clue();
-            clue.SetGameItems += Clue_SetPlayerDeck;
-
-            //이벤트 발생
-            clue.SetItems();
         }
         #endregion
 
@@ -45,6 +38,12 @@ namespace EventDemo
         {
             _cards = _cards.OrderBy(x => Guid.NewGuid()).ToList();
             _index = 0;
+
+            //clue에서 data를 받아서 _card에 18장의 카드를 생성한다.
+            Clue.Instance.SetGameItems += Clue_SetPlayerDeck;
+
+            //이벤트 발생
+            Clue.Instance.SetItems();
         }
 
         public Card[] Draw(int SkipCount, int TakeCount)

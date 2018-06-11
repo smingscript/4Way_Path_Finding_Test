@@ -12,6 +12,20 @@ namespace EventDemo.Tests
     public class RoomTests
     {
         [TestMethod()]
+        public void 게임을_시작하고_정답_카드를_뽑는_이벤트_테스트()
+        {
+            Game game = new Game();
+            game.StartGame();
+
+            foreach (var item in game.AnswerCards)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine();
+        }
+
+        [TestMethod()]
         public void 게임을_시작하고_카드를_배포하는_이벤트_테스트()
         {
             Game game = new Game();
@@ -40,5 +54,7 @@ namespace EventDemo.Tests
 
             Console.WriteLine();
         }
+
+
     }
 }
