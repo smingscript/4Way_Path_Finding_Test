@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\KCCI\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_TheClue_Path_Finding_Test.-2033835329.00" t="ExcludeRecursive" />
+    <e p="C:\Users\KCCI\Desktop\4Way_Path_Finding_Test\TheClue_Path_Finding_Test" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets\Scripts" t="Include">
+        <e p="Board.cs" t="Include" />
+        <e p="Dice.cs" t="Include" />
+        <e p="Heap.cs" t="Include" />
+        <e p="MovableTileFinder.cs" t="Include" />
+        <e p="Node.cs" t="Include" />
+        <e p="PathFinder.cs" t="Include" />
+        <e p="Point.cs" t="Include" />
+        <e p="TileFinder.cs" t="Include" />
+        <e p="TileGrid.cs" t="Include" />
+      </e>
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+      <e p="TheClue_Path_Finding_Test.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>

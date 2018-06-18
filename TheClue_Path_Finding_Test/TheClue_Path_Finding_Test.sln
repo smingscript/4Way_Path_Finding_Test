@@ -1,7 +1,6 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheClue_Path_Finding_Test", "TheClue_Path_Finding_Test.csproj", "{C2F11B69-EF82-45E9-6682-8DCA391D0CC5}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{FF999C9F-ADC0-AD84-88E1-2502AF0A12CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +8,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C2F11B69-EF82-45E9-6682-8DCA391D0CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C2F11B69-EF82-45E9-6682-8DCA391D0CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C2F11B69-EF82-45E9-6682-8DCA391D0CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C2F11B69-EF82-45E9-6682-8DCA391D0CC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF999C9F-ADC0-AD84-88E1-2502AF0A12CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF999C9F-ADC0-AD84-88E1-2502AF0A12CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF999C9F-ADC0-AD84-88E1-2502AF0A12CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF999C9F-ADC0-AD84-88E1-2502AF0A12CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
