@@ -14,7 +14,6 @@ namespace EventDemo
 
             while (Suggestion.MakeSuggestion(room.roomObjects))
             {
-                //이 부분을 이벤트로 처리한다!
                 Console.WriteLine("선택한 카드:");
                 foreach (var item in Suggestion.suggestions)
                 {

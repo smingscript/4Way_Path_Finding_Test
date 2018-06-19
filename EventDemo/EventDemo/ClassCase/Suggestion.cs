@@ -24,6 +24,9 @@ namespace EventDemo
             Console.WriteLine("추리 아이템을 하나씩 입력하세요:");
             suggestion = Console.ReadLine();
 
+            //TODO 하나의 클루를 추리하면 선택된 클루에 대한 이벤트를 발생시킨다.
+
+
             #region For Console
             if (!roomObjs.Keys.ToArray().Contains(suggestion))
             {
@@ -38,7 +41,7 @@ namespace EventDemo
                 return true;
             }
 
-            //이미 추가된 추리이면 제거한다
+            //이미 추가 된 추리이면 제거한다
             if (suggestions.Contains(suggestion))
             {
                 suggestions.Remove(suggestion);
@@ -48,11 +51,6 @@ namespace EventDemo
             else
             {
                 suggestions.Add(suggestion);
-                
-                //TODO 하나의 클루를 추리하면 선택된 클루에 대한 이벤트를 발생시킨다.
-                //{ } 에서 { } 이 { }을 죽였다
-
-
                 return true;
             }
 

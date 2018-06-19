@@ -33,7 +33,7 @@ namespace EventDemo
 
         #endregion
 
-        private Dictionary<Enum, List<string>> clueLists;
+        public Dictionary<Enum, List<string>> clueLists;
 
         public void SetItems()
         {
